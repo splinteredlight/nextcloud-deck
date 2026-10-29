@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name" translatable="false">Nextcloud Deck</string>
-    <string name="app_name_short" translatable="false">Deck</string>
+    <string name="app_name" translatable="false">Nextcloud Deck AI</string>
+    <string name="app_name_short" translatable="false">Deck AI</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="hint_search_deck">Search deck</string>

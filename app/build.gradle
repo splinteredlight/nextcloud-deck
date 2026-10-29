@@ -7,6 +7,8 @@ android {
 
     defaultConfig {
         applicationId "it.niedermann.nextcloud.deck"
+        // fork: own id so it installs next to the official app (flavors append theirs: .ai.play, .ai.dev, ...)
+        applicationIdSuffix ".ai"
         minSdk 24
         targetSdk 37
         versionCode 1027000
