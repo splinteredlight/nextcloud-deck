@@ -71,7 +71,7 @@ public class ExecutorServiceProvider {
                 }
                 DeckLog.error("Error executing task, retrying for", retriesLeft, " more times. Error causing this:", DeckLog.getStacktraceAsString(e));
                 retriesLeft--;
-                EXECUTOR.submit(this);
+                EXECUTOR.execute(this); // fork: submit() would wrap this in another RetryableRunnable on every retry
             }
         }
     }
