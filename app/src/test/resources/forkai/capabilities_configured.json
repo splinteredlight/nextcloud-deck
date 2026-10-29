@@ -1,0 +1,37 @@
+{
+  "ocs": {
+    "meta": {
+      "status": "ok",
+      "statuscode": 200,
+      "message": "OK"
+    },
+    "data": {
+      "version": {
+        "major": 34,
+        "minor": 0,
+        "micro": 1,
+        "string": "34.0.1",
+        "edition": "",
+        "extendedSupport": false
+      },
+      "capabilities": {
+        "theming": {
+          "color": "#0082c9",
+          "color-text": "#ffffff"
+        },
+        "deck": {
+          "version": "1.18.5",
+          "canCreateBoards": true,
+          "apiVersions": [
+            "1.0",
+            "1.1"
+          ],
+          "forkAi": {
+            "version": 1,
+            "configured": true
+          }
+        }
+      }
+    }
+  }
+}

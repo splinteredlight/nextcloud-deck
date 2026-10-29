@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  SPDX-FileCopyrightText: 2026 splinteredlight
+  SPDX-License-Identifier: GPL-3.0-or-later
+
+  Strings of the fork's AI features. Kept out of strings.xml so upstream changes there never conflict.
+-->
+<resources>
+    <!-- Board menu -->
+    <string name="fork_ai_menu_assistant">AI assistant</string>
+    <string name="fork_ai_menu_autotag">Auto-tag</string>
+    <string name="fork_ai_menu_not_configured">%1$s (not set up on the server)</string>
+
+    <!-- AI assistant dialog -->
+    <string name="fork_ai_assistant_title">AI assistant</string>
+    <string name="fork_ai_assistant_hint">Type a request or paste any text. Matching cards on this board get created or updated.</string>
+    <string name="fork_ai_assistant_input_hint">Request</string>
+    <string name="fork_ai_assistant_placeholder">e.g. Plan the team offsite and book a venue</string>
+    <string name="fork_ai_assistant_send">Send</string>
+    <string name="fork_ai_assistant_too_long">Too long: the server accepts at most %1$d characters.</string>
+    <string name="fork_ai_working">Working on it…</string>
+
+    <!-- Auto-tag dialog -->
+    <string name="fork_ai_autotag_title">Auto-tag</string>
+    <string name="fork_ai_autotag_hint">Goes through every current card without a label and applies the best-fitting existing labels, at most two per card. No new labels are created; cards that nothing fits stay untagged.</string>
+    <string name="fork_ai_autotag_counting">Counting untagged cards…</string>
+    <string name="fork_ai_autotag_all_tagged">Every current card already has a label.</string>
+    <string name="fork_ai_autotag_no_labels">This board has no labels to choose from yet.</string>
+    <plurals name="fork_ai_autotag_untagged">
+        <item quantity="one">%d card has no label.</item>
+        <item quantity="other">%d cards have no label.</item>
+    </plurals>
+    <string name="fork_ai_autotag_tagging">Tagging…</string>
+    <string name="fork_ai_autotag_run">Tag untagged cards</string>
+
+    <!-- Shared -->
+    <string name="fork_ai_syncing_local_changes">Syncing your local changes first…</string>
+    <string name="fork_ai_refreshing">Refreshing the board…</string>
+    <string name="fork_ai_refreshed">Board refreshed. Tap an entry to open its card.</string>
+    <string name="fork_ai_refresh_failed">Could not refresh the board. Pull down on the board to sync.</string>
+    <string name="fork_ai_card_not_local">This card is not on this device yet. Wait for the refresh to finish, then try again.</string>
+    <string name="fork_ai_busy">Another AI request is still running. Wait for it to finish.</string>
+    <string name="fork_ai_note_local_changes_not_pushed">Your local changes could not be synced first, so the AI worked with the board as it was on the server.</string>
+    <string name="fork_ai_marker_ok" translatable="false">✓</string>
+    <string name="fork_ai_marker_failed" translatable="false">✗</string>
+    <string name="fork_ai_marker_skipped" translatable="false">–</string>
+    <string name="fork_ai_marker_note" translatable="false">•</string>
+    <string name="fork_ai_result_ok">Done</string>
+    <string name="fork_ai_result_failed">Failed</string>
+    <string name="fork_ai_result_skipped">Left untagged</string>
+    <string name="fork_ai_result_note">Note</string>
+    <string name="fork_ai_result_open_card">Open card</string>
+
+    <!-- Errors -->
+    <string name="fork_ai_error_offline">No connection (or sync is limited to Wi-Fi). Nothing was sent.</string>
+    <string name="fork_ai_error_bad_request">The server rejected the request.</string>
+    <string name="fork_ai_error_not_logged_in">The server says you are not logged in. Check the account in the Nextcloud Files app.</string>
+    <string name="fork_ai_error_forbidden">You don\'t have permission to edit this board.</string>
+    <string name="fork_ai_error_not_found">The server doesn\'t offer this feature, or the board no longer exists.</string>
+    <string name="fork_ai_error_rate_limited">Too many AI requests in a short time. Wait a few minutes and try again.</string>
+    <string name="fork_ai_error_maintenance">The server is in maintenance mode. Try again later.</string>
+    <string name="fork_ai_error_server">The AI request failed on the server.</string>
+    <string name="fork_ai_error_gateway">A proxy in front of the server stopped waiting for the answer.</string>
+    <string name="fork_ai_error_timeout">The server did not answer in time.</string>
+    <string name="fork_ai_error_no_response">The connection broke before the server\'s answer arrived.</string>
+    <string name="fork_ai_error_client">The request could not be sent through the Nextcloud Files app.</string>
+    <string name="fork_ai_error_unknown">Unexpected response from the server (HTTP %1$d).</string>
+    <string name="fork_ai_error_outcome_unknown">The request may still have been carried out. The board is being refreshed: check it before sending the same request again.</string>
+    <string name="fork_ai_error_details">Details: %1$s</string>
+</resources>

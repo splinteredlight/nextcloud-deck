@@ -584,6 +584,7 @@ public class JsonToEntityParser {
                     JsonObject caps = data.getAsJsonObject("capabilities");
                     if (caps.has("deck")) {
                         JsonObject deck = caps.getAsJsonObject("deck");
+                        capabilities.setForkAi(it.niedermann.nextcloud.deck.forkai.ForkAiCapability.parse(deck)); // fork: AI endpoints
                         if (deck.has("version")) {
                             version = deck.get("version").getAsString();
                             if (version == null || version.trim().length() < 1) {

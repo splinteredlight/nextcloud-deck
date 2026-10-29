@@ -1,0 +1,31 @@
+{
+  "summary": "Created a card for the offsite and added a step to the venue card.",
+  "results": [
+    {
+      "type": "create_card",
+      "ok": true,
+      "detail": "Created card \"Plan team offsite\" (2 checklist steps) [Planning]",
+      "cardId": 412
+    },
+    {
+      "type": "append_checklist",
+      "ok": true,
+      "detail": "Added \"Ask for catering quotes\" to \"Book venue\"",
+      "cardId": 377
+    },
+    {
+      "type": "move_card",
+      "ok": false,
+      "detail": "move_card: there is no list called \"Someday\""
+    },
+    {
+      "type": "edit_card",
+      "ok": true,
+      "detail": "Updated the description of \"Budget\"",
+      "cardId": null
+    }
+  ],
+  "notes": [
+    "The venue card already covers the booking itself."
+  ]
+}

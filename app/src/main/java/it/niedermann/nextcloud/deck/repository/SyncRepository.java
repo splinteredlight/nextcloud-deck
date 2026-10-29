@@ -296,6 +296,7 @@ public class SyncRepository extends BaseRepository {
                         Account acc = dataBaseAdapter.getAccountByIdDirectly(account.getId());
                         acc.applyCapabilities(response, headers.get("ETag"));
                         dataBaseAdapter.updateAccount(acc);
+                        it.niedermann.nextcloud.deck.forkai.ForkAiCapabilityStore.save(context, acc.getId(), response); // fork
                         callback.getAccount().setServerDeckVersion(acc.getServerDeckVersion());
                         callback.onResponse(response, headers);
                     }

@@ -157,6 +157,7 @@ public class MainActivity extends AppCompatActivity implements DeleteStackListen
     private StackAdapter stackAdapter;
     private DrawerMenuInflater<MainActivity> drawerMenuInflater;
     private Menu listMenu;
+    private it.niedermann.nextcloud.deck.forkai.ForkAiMenu forkAiMenu; // fork: AI entries in the list menu
     private ConnectivityManager.NetworkCallback networkCallback;
     private MainActivityNavigationHandler navigationHandler;
     @Nullable
@@ -253,8 +254,12 @@ public class MainActivity extends AppCompatActivity implements DeleteStackListen
             final var listMenuPopup = new PopupMenu(this, binding.listMenuButton);
             listMenu = listMenuPopup.getMenu();
             getMenuInflater().inflate(R.menu.list_menu, listMenu);
+            forkAiMenu = new it.niedermann.nextcloud.deck.forkai.ForkAiMenu(this, listMenu); // fork
             listMenuPopup.setOnMenuItemClickListener(this::onOptionsItemSelected);
-            binding.listMenuButton.setOnClickListener((v) -> listMenuPopup.show());
+            binding.listMenuButton.setOnClickListener((v) -> {
+                forkAiMenu.updateVisibility(); // fork
+                listMenuPopup.show();
+            });
 
             getOnBackPressedDispatcher().addCallback(this, onBackPressedCallback);
 
@@ -454,6 +459,9 @@ public class MainActivity extends AppCompatActivity implements DeleteStackListen
         binding.appBarLayout.setExpanded(true);
 
         observeSearchTerm(account, currentBoard);
+        if (forkAiMenu != null) {
+            forkAiMenu.setBoard(account, currentBoard); // fork
+        }
 
         if (currentBoard == null) {
             applyBoardTheme(account.getColor());
@@ -748,6 +756,9 @@ public class MainActivity extends AppCompatActivity implements DeleteStackListen
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if (forkAiMenu != null && forkAiMenu.onMenuItemSelected(item)) {
+            return true; // fork
+        }
         final int itemId = item.getItemId();
 
         if (itemId == R.id.filter || itemId == R.id.filter_active) {

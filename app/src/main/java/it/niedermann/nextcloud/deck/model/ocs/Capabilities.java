@@ -19,8 +19,18 @@ public class Capabilities {
     @ColorInt
     private int textColor = DEFAULT_TEXT_COLOR;
     private boolean maintenanceEnabled = false;
+    // fork: AI endpoints, null on stock servers
+    private it.niedermann.nextcloud.deck.forkai.ForkAiCapability forkAi;
 
     public Capabilities() {
+    }
+
+    public it.niedermann.nextcloud.deck.forkai.ForkAiCapability getForkAi() {
+        return forkAi;
+    }
+
+    public void setForkAi(it.niedermann.nextcloud.deck.forkai.ForkAiCapability forkAi) {
+        this.forkAi = forkAi;
     }
 
     public Version getDeckVersion() {

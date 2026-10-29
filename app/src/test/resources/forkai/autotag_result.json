@@ -1,0 +1,23 @@
+{
+  "summary": "Tagged 2 of 4 untagged cards.",
+  "results": [
+    {
+      "cardId": 501,
+      "ok": true,
+      "detail": "Tagged \"Renew domain\" with Admin"
+    },
+    {
+      "cardId": 502,
+      "ok": true,
+      "detail": "Tagged \"Fix login bug\" with Bug, Urgent"
+    },
+    {
+      "cardId": 503,
+      "ok": false,
+      "detail": "Left \"Misc ideas\" untagged, no label fits"
+    }
+  ],
+  "notes": [
+    "No decision came back for \"Old draft\""
+  ]
+}
